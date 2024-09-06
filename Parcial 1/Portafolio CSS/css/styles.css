@@ -1,0 +1,135 @@
+
+
+*{
+    
+    font-family: "Merriweather", serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+h1{
+    font-family: "Sacramento", cursive ;
+    color: rgb(162, 101, 136); 
+    size: 5.5 rem;
+    margin: 50px ;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    color: rgb(68, 78, 179); 
+    size: 2.5 rem;
+    padding-bottom: 10px;
+}
+
+h3{
+    font-family:"Montserrat", sans-serif;
+    color: rgb(126, 67, 153);
+}
+
+
+body{
+    background-color:rgb(150, 186, 164);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 100px;
+}
+
+.card{
+    width: 400px;
+    background-color:rgb(202, 227, 228);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p{
+    font-size: 15px;
+    color:rgb(229, 223, 243);
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+a{
+    text-decoration: none; 
+    font-weight: bold;
+    color: green; 
+}
+
+
+hr {
+    width: 4%; 
+    border-top: 6px dotted #EAF6F6;
+    border-bottom: none;
+    margin: 20px auto;
+    height: 0;
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.image{
+    width: 126px;
+    height: 350px;
+    margin-left: 55px;
+}
+
+.list{
+    list-style-position: center;
+}
+
+.form-outline{
+    border: 10px dotted #EAF6F6;
+    background-color: rgb(101, 118, 139);
+    padding: 20px;
+    margin:20px auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.class2{
+    background-color: rgb(186, 206, 222);
+}
+
+input{
+    border-radius: 100%;
+    background-color: aliceblue;
+}

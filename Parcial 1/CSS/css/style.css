@@ -1,0 +1,43 @@
+
+*{
+    font-family:"Arial", regular;
+    font-size: 12;
+    color: black;
+}
+
+
+/* CSS Box model */
+.container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: relative;
+
+}
+
+
+.top {
+    background-color: blue;
+    border: 10px solid black;
+    padding: 20px;
+}
+
+
+.middle {
+    background-color: red;
+    position: absolute;
+    border: 20px solid black;
+    top: 268px; 
+    left: 268px;
+}
+
+.bottom {
+    background-color: yellow;
+    position: absolute;
+    border: 10px solid black;
+    top: 508px;
+    left: 508px;
+
+}
