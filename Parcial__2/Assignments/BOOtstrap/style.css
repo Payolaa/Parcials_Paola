@@ -1,0 +1,47 @@
+*{
+    font-family:"Assistant", regular;
+}
+
+.body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.card img{
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.popover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popover {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popover.show {
+    display: block;
+}
+
+.carousel-item img {
+    max-width: 450px; /* Set max-width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+}
+
+/* styles.css */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #781ed9; /* Change this to your desired color */
+    border-radius: 80%; /* Optional: make the background circular */
+}
