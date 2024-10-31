@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Test</title>
+</head>
+<body>
+
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <h3>Registered Names:</h3>
+    <ul id="nameList"></ul>
+
+
+    <h3>TODO List</h3>
+    <form action="/task" method="post">
+        <input type="text" name="task" placeholder="New Task">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        async function fetchNames() {
+            const response = await fetch('/names');
+            const names = await response.json();
+            const nameList = document.getElementById('nameList');
+            nameList.innerHTML = '';
+            names.forEach(name => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="/wazzup/${name}">${name}</a>`;
+                nameList.appendChild(li);
+            });
+        }
+
+        async function fetchTasks() {
+            const response = await fetch('/tasks');
+            const tasks = await response.json();
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${task} 
+                    <a href="/task/delete/${index}">Delete</a> 
+                    <a href="/task/up/${index}">↑</a> 
+                    <a href="/task/down/${index}">↓</a>`;
+                taskList.appendChild(li);
+            });
+        }
+
+        fetchNames();
+        fetchTasks();
+    </script>
+
+</body>
+</html>
+
