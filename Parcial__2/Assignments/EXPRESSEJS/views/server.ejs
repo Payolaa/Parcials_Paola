@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1> Geetings <%= name %> ! </h1>
+<p>
+    You did it!
+</p>
+
+<% if (method === 'GET') { %>
+    <p> You got here using GET (jej I know, funny)</p>
+ <% } else if(method === 'POST') { %>
+    <p> You got here using POST </p>
+<% } %>
+
+<%- include("partials/footer"); -%>

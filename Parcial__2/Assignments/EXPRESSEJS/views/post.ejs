@@ -1,0 +1,12 @@
+<%- include ("partials / header"); -%>
+
+<h1> <%- post.title -%> </h1>
+<p> <%- post.content -%> </p>
+
+<form action ="/delete-post/<%= post.id %>" method = "POST">
+    <button type = "submit" > delete-post </button>
+</form>
+
+<a href = "/blog" > Go back home </a>
+
+<%- include ("partials / footer"); -%>

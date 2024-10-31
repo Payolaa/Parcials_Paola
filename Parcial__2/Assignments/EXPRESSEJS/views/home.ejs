@@ -1,0 +1,39 @@
+<%- include ("partials / header"); -%>
+
+<h1> Hello <%= name %> !</h1>
+<p> Enjoy your post-it wall!</p>
+
+<section id="posts">
+    <% if (posts && posts.length > 0){ %>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <h3> <%= post.title %> </h3>
+                    <p>
+                        <%= post.content.length > 100 ? post.content.slice(0,100) + '...' : post.content %>
+                    </p>
+                    <a href = "/post/<%=post.id %>" > <b> READ MORE </b></a>
+                </li>
+            <% }); %>
+        </ul>
+        <% } else { %>
+            <p> There are no posts available. </p>
+        <% } %
+</section>
+
+<h3> Wanting to write something? Write here and post it! </h3>
+
+    <form action = "/add.post" method="POST">
+        <label for = "title" > TITLE: </label>
+        <input type = "text" name = "title" id = "title" required>
+        <br/>
+        <label for = "content" > CONTENT: </label>
+        <textarea name = "content" id="content" rows = "2" required > </textarea>
+        </input>
+
+        <button type = "submit" > SUBMIT POST: </button>
+
+    </form>
+
+
+<%- include ("partials / footer"); -%>
